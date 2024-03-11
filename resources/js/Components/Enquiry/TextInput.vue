@@ -8,6 +8,8 @@
                        :id="name"
                        :autocomplete="name"
                        :placeholder="placeholder"
+                       :value="modelValue"
+                       @input="$emit('update:modelValue', $event.target.value)"
                        class="flex-1 border-0 bg-transparent py-1.5 px-2 text-white focus:ring-0 sm:text-sm sm:leading-6"
                 />
             </div>
@@ -26,6 +28,11 @@ export default {
         },
         label: String,
         placeholder: String,
-    }
+        modelValue: String,
+    },
+
+    emits: [
+        'update:modelValue',
+    ],
 }
 </script>
