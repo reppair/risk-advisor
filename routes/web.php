@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\StoreEnquiry;
 use App\Models\Product;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -24,6 +25,8 @@ Route::get('/', function () {
         'products' => Product::select(['id', 'name', 'description'])->get(),
     ]);
 });
+
+Route::post('enquiries/store', StoreEnquiry::class)->name('enquiries.store');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

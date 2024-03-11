@@ -1,3 +1,30 @@
+<script>
+import InputError from "@/Components/InputError.vue";
+export default {
+    name: 'TextInput',
+
+    props: {
+        name: String,
+        type: {
+            type: String,
+            default: 'text',
+        },
+        label: String,
+        placeholder: String,
+        modelValue: String,
+        error: String,
+    },
+
+    emits: [
+        'update:modelValue',
+    ],
+
+    components: {
+        InputError,
+    }
+}
+</script>
+
 <template>
     <div>
         <label :for="name" class="block text-sm font-medium leading-6 text-white" v-text="label" />
@@ -13,26 +40,8 @@
                        class="flex-1 border-0 bg-transparent py-1.5 px-2 text-white focus:ring-0 sm:text-sm sm:leading-6"
                 />
             </div>
+            <input-error class="mt-1" v-if="error" :message="error" />
         </div>
     </div>
 </template>
-<script>
-export default {
-    name: 'TextInput',
 
-    props: {
-        name: String,
-        type: {
-            type: String,
-            default: 'text',
-        },
-        label: String,
-        placeholder: String,
-        modelValue: String,
-    },
-
-    emits: [
-        'update:modelValue',
-    ],
-}
-</script>
