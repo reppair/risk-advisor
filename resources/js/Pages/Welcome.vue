@@ -6,6 +6,7 @@ defineProps({
     canLogin: Boolean,
     canRegister: Boolean,
     products: Array,
+    contact_preference_options: Array,
     errors: Object,
 });
 </script>
@@ -41,7 +42,7 @@ defineProps({
         </div>
 
         <div class="max-w-7xl mx-auto px-6 py-12 lg:px-8 lg:py-16">
-            <EnquiryForm :products="products" :errors="errors" />
+            <EnquiryForm :products="products" :errors="errors" :contact_preference_options="contact_preference_options" />
         </div>
     </div>
 </template>

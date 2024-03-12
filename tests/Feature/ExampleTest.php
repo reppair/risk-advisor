@@ -1,5 +1,6 @@
 <?php
 
+use App\Enum\ContactPreference;
 use App\Models\Product;
 use Inertia\Testing\AssertableInertia;
 
@@ -14,7 +15,7 @@ it('returns a successful response', function () {
         ->assertStatus(200)
         ->assertInertia(fn (AssertableInertia $page) =>
             $page->component('Welcome')
-                ->has('products', $products->count())
                 ->where('products', $products->toArray())
+                ->where('contact_preference_options', ContactPreference::valuesToArray())
         );
 });

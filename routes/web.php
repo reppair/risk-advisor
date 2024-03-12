@@ -1,5 +1,6 @@
 <?php
 
+use App\Enum\ContactPreference;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StoreEnquiry;
 use App\Models\Product;
@@ -23,6 +24,7 @@ Route::get('/', function () {
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
         'products' => Product::select(['id', 'name', 'description'])->get(),
+        'contact_preference_options' => ContactPreference::valuesToArray(),
     ]);
 });
 
