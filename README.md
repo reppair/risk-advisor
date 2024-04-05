@@ -56,16 +56,3 @@ The test coverage currently looks like this:
   ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
                                                                                                                                                  Total: 85.9 %
 ```
-
-## Outro
-I decided to follow KISS principle and toy around with Inertia for the first time instead of data modeling. It feels
-good building with Inertia, although I just barely touched the surface of it today. I've been doing a lot of Livewire
-last few years so my Vue is a bit rusty, so I went with what I know - options API, but I got my eyes on the composition
-API - I'll be learning it.
-
-Anyway, I started at 19:45 today, now it is 2:25 so that is what, 6.5 hours? Yeah... that is with several interruptions
-after a 12 hours work day today, prior starting this task so not my best turn around time, nor it is a masterpiece,
-but it will do just fine for a demo I think.
-
-Cheers!
-It has been a pleasure!
